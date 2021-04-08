@@ -9,6 +9,10 @@ export const restaurantsRequest = (location = "37.7749295,-122.4194155") => {
     resolve(mock);
   });
 };
-restaurantsRequest().then((result) => {
-  console.log(result);
-});
+restaurantsRequest()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(`Error: ${err}`);
+  });
